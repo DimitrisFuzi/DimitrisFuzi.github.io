@@ -162,15 +162,29 @@ h2{
   border: 1px solid var(--line);
   overflow: hidden;
   background: var(--panel-2);
-  min-height: 110px;
+
+  /* Force a predictable thumbnail box */
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
+
 .thumb-placeholder{
-  height: 110px;
+  width: 100%;
+  height: 100%;
   display:flex;
   align-items:center;
   justify-content:center;
   color: rgba(230,237,243,.55);
   font-size: 13px;
+}
+
+/* Make video fill the box */
+.thumb video{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* change to 'contain' if you don't want cropping */
+  background: #000;
 }
 
 .card-title-row h3{
