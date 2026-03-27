@@ -172,6 +172,13 @@ h2{
   color: rgba(230,237,243,.55);
   font-size: 13px;
 }
+.thumb-video{
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
 
 .card-title-row h3{
   margin: 0;
