@@ -101,6 +101,15 @@ h1{
   font-size: 14px;
 }
 
+/* Disabled button for "coming soon" links */
+.btn.disabled,
+.btn[aria-disabled="true"]{
+  opacity: .55;
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+}
+
 .meta{
   display:flex;
   flex-wrap: wrap;
@@ -129,6 +138,14 @@ h2{
   font-size: 22px;
 }
 .subtle{ color: var(--muted); margin: 0 0 14px; max-width: 80ch; }
+
+/* Systems snapshot */
+.systems-snapshot h2{
+  margin-bottom: 10px;
+}
+.bullets.snapshot{
+  margin-top: 10px;
+}
 
 .grid{
   display:grid;
@@ -178,13 +195,21 @@ h2{
   font-size: 13px;
 }
 
-/* Make video fill the box */
+/* Keep legacy video styling (if you use <video> elsewhere) */
 .thumb video{
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover; /* change to 'contain' if you don't want cropping */
   background: #000;
+}
+
+/* YouTube / iframe embed fills the thumbnail box */
+.thumb-embed{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 .card-title-row h3{
@@ -220,6 +245,7 @@ h2{
   margin: 12px 0 12px;
   padding-left: 18px;
   color: var(--muted);
+  line-height: 1.6;
 }
 .bullets li{ margin: 6px 0; }
 
@@ -231,6 +257,7 @@ h2{
   border-radius: 8px;
   background: rgba(255,255,255,.03);
 }
+
 .tags{
   display:flex;
   flex-wrap: wrap;
