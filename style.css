@@ -207,23 +207,13 @@ h2{
   position: relative;
 }
 
-/* New: wrapper so the caption can be centered to the same width as the thumb */
-.thumb-wrap{
-  width: 100%;
-}
-@media (max-width: 520px){
-  .thumb-wrap{
-    width: 100%;
-  }
-}
-
 .thumb-caption{
   margin-top: 8px;
   color: var(--muted);
   font-size: 12.5px;
   line-height: 1.2;
-  text-align: center;     /* requested: center align */
-  width: 100%;            /* ensure it centers relative to thumb-wrap */
+  text-align: center; /* center relative to the video box */
+  width: 100%;
 }
 
 .thumb-placeholder{
@@ -275,6 +265,14 @@ h2{
   border-bottom: 10px solid transparent;
   transform: translateX(2px);
   opacity: .92;
+}
+
+.card-subhead{
+  margin: 10px 0 6px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .2px;
 }
 
 .card-title-row h3{
