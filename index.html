@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Junior Gameplay Developer Candidate — Gameplay Systems (Unreal/Unity)</title>
+  <title>Junior Gameplay Developer — Gameplay Systems (Unreal/Unity)</title>
   <meta name="description" content="Junior Gameplay Developer focused on gameplay systems across Unreal (Blueprints) and Unity (C#): interaction, inventory, UI flow, and turn-based combat." />
 
   <!-- Cache-bust so style changes show up immediately -->
@@ -33,11 +33,11 @@
       </p>
 
       <div class="cta-row" aria-label="Primary links">
+        <!-- NOTE: ensure this matches your repo EXACTLY (case-sensitive on GitHub Pages) -->
         <a class="btn" href="Assets/resume/Foutzitzakis_Dimitris_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
         <a class="btn" href="https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188" target="_blank" rel="noreferrer">LinkedIn</a>
         <a class="btn" href="mailto:foutz_is@hotmail.com">Email</a>
 
-        <!-- Image-based icon buttons -->
         <a class="btn icon" href="https://github.com/DimitrisFuzi" target="_blank" rel="noreferrer" aria-label="GitHub">
           <img class="icon-img" src="Assets/icons/github-mark-white.png" alt="" aria-hidden="true" />
         </a>
@@ -76,17 +76,19 @@
       </p>
 
       <div class="grid">
+        <!-- Unreal project card -->
         <article class="card">
           <div class="card-top">
-            <div class="thumb">
-              <a class="thumb-link" href="https://www.youtube.com/watch?v=0bcQEUce8Ac" target="_blank" rel="noreferrer"
-                 aria-label="Watch Unreal walkthrough on YouTube">
-                <img class="thumb-img" src="Assets/Video/Video_Cover.png" alt="Unreal systems walkthrough thumbnail" />
-                <span class="thumb-play" aria-hidden="true"></span>
-              </a>
-
-              <!-- (3) Video labeling -->
-              <div class="thumb-label" aria-hidden="true">Systems Highlight</div>
+            <div>
+              <div class="thumb">
+                <a class="thumb-link" href="https://www.youtube.com/watch?v=0bcQEUce8Ac" target="_blank" rel="noreferrer"
+                   aria-label="Watch Unreal walkthrough on YouTube">
+                  <img class="thumb-img" src="Assets/Video/Video_Cover.png" alt="Unreal systems walkthrough thumbnail" />
+                  <span class="thumb-play" aria-hidden="true"></span>
+                </a>
+              </div>
+              <!-- moved UNDER the video box -->
+              <div class="thumb-caption">Systems Highlight</div>
             </div>
 
             <div class="card-title-row">
@@ -103,8 +105,6 @@
             <li>Inventory component + struct-driven dynamic UI grid</li>
           </ul>
 
-          <!-- (5) Removed per-project tag pills -->
-
           <div class="links">
             <a class="btn small" href="https://fouzis.itch.io/firstpersonpuzzlegameshowcase-systems-prototype-unreal-blueprint" target="_blank" rel="noreferrer">itch.io</a>
             <a class="btn small" href="https://github.com/DimitrisFuzi/FirstPersonPuzzleGameShowcase" target="_blank" rel="noreferrer">Code</a>
@@ -113,6 +113,7 @@
           </div>
         </article>
 
+        <!-- Unity project card -->
         <article class="card">
           <div class="card-top">
             <div class="thumb">
@@ -132,8 +133,6 @@
             <li>Enemy intent/telegraph system + readable behavior structure</li>
             <li>Status effects + reward flow (fight → reward → boss)</li>
           </ul>
-
-          <!-- (5) Removed per-project tag pills -->
 
           <div class="links">
             <a class="btn small" href="https://fouzis.itch.io/card-battler-unity-learning-clone-inspired-by-slay-the-spire" target="_blank" rel="noreferrer">itch.io</a>
@@ -164,8 +163,6 @@
           <div class="label">LinkedIn</div>
           <a href="https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188" target="_blank" rel="noreferrer">linkedin.com/in/dimitrios-foutzitzakis-271302188</a>
         </div>
-
-        <!-- (6) Added itch.io profile link in Contact -->
         <div>
           <div class="label">itch.io</div>
           <a href="https://fouzis.itch.io/" target="_blank" rel="noreferrer">fouzis.itch.io</a>
@@ -188,4 +185,5 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
