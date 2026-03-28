@@ -353,11 +353,12 @@ h2{
 }
 
 .icon-img{
-  width: 18px;
-  height: 18px;
+  width: 24px;   /* was 18/22 */
+  height: 24px;  /* was 18/22 */
   display:block;
   object-fit: contain;
-  opacity: .92;
+  opacity: 1;
+  visibility: visible;
 }
 
 .btn.icon:hover .icon-img{
