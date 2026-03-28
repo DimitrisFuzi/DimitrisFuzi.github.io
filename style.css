@@ -15,9 +15,12 @@ html,body{ height: 100%; }
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.18), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(61,220,151,.10), transparent 55%),
-              var(--bg);
+  /* Reduce banding artifacts by softening / rebalancing gradients */
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(124,92,255,.14), transparent 62%),
+    radial-gradient(780px 460px at 82% 12%, rgba(61,220,151,.08), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,0) 40%),
+    var(--bg);
   color: var(--text);
   line-height: 1.5;
 }
@@ -166,7 +169,7 @@ h2{
 
 .card-top{
   display:grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 260px 1fr; /* wider thumbnail */
   gap: 12px;
   align-items: start;
 }
