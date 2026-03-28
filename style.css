@@ -207,11 +207,23 @@ h2{
   position: relative;
 }
 
+/* New: wrapper so the caption can be centered to the same width as the thumb */
+.thumb-wrap{
+  width: 100%;
+}
+@media (max-width: 520px){
+  .thumb-wrap{
+    width: 100%;
+  }
+}
+
 .thumb-caption{
   margin-top: 8px;
   color: var(--muted);
   font-size: 12.5px;
   line-height: 1.2;
+  text-align: center;     /* requested: center align */
+  width: 100%;            /* ensure it centers relative to thumb-wrap */
 }
 
 .thumb-placeholder{
