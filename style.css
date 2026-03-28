@@ -5,24 +5,44 @@
   --text: #e6edf3;
   --muted: #9aa7b2;
   --line: rgba(255,255,255,.08);
-  --accent: #7c5cff; /* purple accent */
-  --accent-2: #3ddc97; /* green accent (used sparingly) */
+  --accent: #7c5cff;
+  --accent-2: #3ddc97;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
 *{ box-sizing: border-box; }
 html,body{ height: 100%; }
+
+/* --- Stripe/banding fix: move fancy background to a pseudo-element overlay --- */
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  /* Reduce banding artifacts by softening / rebalancing gradients */
-  background:
-    radial-gradient(900px 520px at 18% 0%, rgba(124,92,255,.14), transparent 62%),
-    radial-gradient(780px 460px at 82% 12%, rgba(61,220,151,.08), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,0) 40%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* This layer holds the gradients so they don’t “cut through” content visually */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.18), transparent 60%),
+    radial-gradient(900px 500px at 80% 10%, rgba(61,220,151,.10), transparent 55%);
+}
+
+/* Optional subtle dark overlay to reduce banding perception further */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.15));
+  pointer-events: none;
 }
 
 a{ color: var(--text); text-decoration: none; }
@@ -104,7 +124,6 @@ h1{
   font-size: 14px;
 }
 
-/* Disabled button for "coming soon" links */
 .btn.disabled,
 .btn[aria-disabled="true"]{
   opacity: .55;
@@ -142,13 +161,8 @@ h2{
 }
 .subtle{ color: var(--muted); margin: 0 0 14px; max-width: 80ch; }
 
-/* Systems snapshot */
-.systems-snapshot h2{
-  margin-bottom: 10px;
-}
-.bullets.snapshot{
-  margin-top: 10px;
-}
+.systems-snapshot h2{ margin-bottom: 10px; }
+.bullets.snapshot{ margin-top: 10px; }
 
 .grid{
   display:grid;
@@ -161,7 +175,7 @@ h2{
 
 .card{
   background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-  border: 1px solid rgba(255,255,255,.06); /* slightly softer than var(--line) */
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 14px;
   box-shadow: var(--shadow);
@@ -169,7 +183,7 @@ h2{
 
 .card-top{
   display:grid;
-  grid-template-columns: 260px 1fr; /* wider thumbnail */
+  grid-template-columns: 180px 1fr;
   gap: 12px;
   align-items: start;
 }
@@ -182,12 +196,8 @@ h2{
   border: 1px solid var(--line);
   overflow: hidden;
   background: var(--panel-2);
-
-  /* Force a predictable thumbnail box */
   width: 100%;
   aspect-ratio: 16 / 9;
-
-  /* NEW: ensure embedded content can stretch reliably */
   position: relative;
 }
 
@@ -201,23 +211,47 @@ h2{
   font-size: 13px;
 }
 
-/* Keep legacy video styling (if you use <video> elsewhere) */
-.thumb video{
+/* Thumbnail link (for YouTube walkthrough) */
+.thumb-link{
+  display:block;
   width: 100%;
   height: 100%;
-  display: block;
-  object-fit: cover; /* change to 'contain' if you don't want cropping */
-  background: #000;
+  position: relative;
+}
+.thumb-img{
+  width: 100%;
+  height: 100%;
+  display:block;
+  object-fit: cover;
 }
 
-.thumb-embed{
-  /* NEW: force iframe to fully cover the thumbnail box */
+/* Play button overlay */
+.thumb-play{
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
+  display:grid;
+  place-items:center;
+  background: linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.30));
+}
+.thumb-play::before{
+  content:"";
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.thumb-play::after{
+  content:"";
+  position:absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transform: translateX(2px);
+  opacity: .92;
 }
 
 .card-title-row h3{

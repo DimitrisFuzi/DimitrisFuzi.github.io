@@ -45,7 +45,6 @@
   </header>
 
   <main class="wrap">
-    <!-- Systems snapshot (between hero and projects) -->
     <section class="section systems-snapshot" aria-label="Systems snapshot">
       <h2>Systems snapshot</h2>
       <ul class="bullets snapshot">
@@ -67,15 +66,12 @@
         <article class="card">
           <div class="card-top">
             <div class="thumb">
-              <!-- YouTube embed (privacy-friendly) -->
-              <iframe
-                class="thumb-embed"
-                src="https://www.youtube-nocookie.com/embed/0bcQEUce8Ac"
-                title="Unreal Systems Walkthrough"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
+              <!-- Replace YouTube iframe with a clickable thumbnail (reliable UX) -->
+              <a class="thumb-link" href="https://www.youtube.com/watch?v=0bcQEUce8Ac" target="_blank" rel="noreferrer"
+                 aria-label="Watch Unreal walkthrough on YouTube">
+                <img class="thumb-img" src="Assets/Video/Video_Cover.png" alt="Unreal systems walkthrough thumbnail" />
+                <span class="thumb-play" aria-hidden="true"></span>
+              </a>
             </div>
 
             <div class="card-title-row">
@@ -111,7 +107,6 @@
         <article class="card">
           <div class="card-top">
             <div class="thumb">
-              <!-- Replace placeholder with screenshot/video when ready -->
               <div class="thumb-placeholder">Add Unity screenshot / video</div>
             </div>
 
