@@ -14,4 +14,4 @@ Unity project itchio page: https://fouzis.itch.io/card-battler-unity-learning-cl
 Unity project github repo: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame
 Unity project readme link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/README.md
 Unity project release link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/releases/tag/v0.1.0-learning-clone
-Unity project video: Not created yet
+Unity project Systems Highlight video: https://youtu.be/_MrFHet-i7c
