@@ -16,3 +16,8 @@ Unity project readme link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGam
 Unity project release link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/releases/tag/v0.1.0-learning-clone
 Unity project Systems Highlight video: https://youtu.be/_MrFHet-i7c
 Unity project Gameplay Reel video: https://youtu.be/DVQS6vFOEyo
+Unity project TECHNICAL document link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md
+
+
+I need you to do the following things 1) Fix the Sustems Hightlight link (currently is wrongly going to Gamplay Reel). The correct link is https://youtu.be/_MrFHet-i7c (Gameplay reel button is correct)
+2) Update the Unity tech breakdown link with: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md
