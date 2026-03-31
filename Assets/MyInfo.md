@@ -1,6 +1,7 @@
 Linkedin: https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188
 email: foutz_is@hotmail.com
 Itchio profile Page: https://fouzis.itch.io/
+portfolio page link: https://dimitrisfuzi.github.io/
 
 Unreal project itchio page: https://fouzis.itch.io/firstpersonpuzzlegameshowcase-systems-prototype-unreal-blueprint
 Unreal project Systems Video: https://youtu.be/0bcQEUce8Ac
@@ -18,6 +19,3 @@ Unity project Systems Highlight video: https://youtu.be/_MrFHet-i7c
 Unity project Gameplay Reel video: https://youtu.be/DVQS6vFOEyo
 Unity project TECHNICAL document link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md
 
-
-I need you to do the following things 1) Fix the Sustems Hightlight link (currently is wrongly going to Gamplay Reel). The correct link is https://youtu.be/_MrFHet-i7c (Gameplay reel button is correct)
-2) Update the Unity tech breakdown link with: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md
