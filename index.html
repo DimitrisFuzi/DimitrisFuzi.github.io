@@ -3,139 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dimitris Fuzi — Junior Gameplay / Systems (Unreal-focused)</title>
-  <meta name="description" content="Junior Gameplay / Systems (Unreal-focused). Unity deckbuilder shipped; Unreal interaction & puzzle systems prototype in progress." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Junior Gameplay Developer — Gameplay Systems (Unreal/Unity)</title>
+  <meta name="description" content="Junior Gameplay Developer focused on gameplay systems across Unreal (Blueprints) and Unity (C#): interaction, inventory, UI flow, and turn-based combat." />
+
+  <!-- Cache-bust so style changes show up immediately -->
+  <link rel="stylesheet" href="style.css?v=20260329-2" />
 </head>
 
 <body>
   <header class="wrap">
     <nav class="nav">
-      <a class="brand" href="/">Dimitris Fuzi</a>
+      <div class="brand-spacer" aria-hidden="true"></div>
+
       <div class="nav-links">
         <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <section class="hero">
-      <h1>Junior Gameplay / Systems <span class="muted">(Unreal-focused)</span></h1>
-      <p class="lead">
-        Transitioning from 6+ years RPA consulting into gameplay systems. Shipped a Unity deckbuilder;
-        building an Unreal interaction & puzzle systems prototype.
+      <h1 class="hero-name">Dimitris Foutzitzakis</h1>
+      <p class="hero-title">
+        Junior Gameplay Developer Candidate <span class="muted">— Gameplay Systems (Unreal/Unity)</span>
       </p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="#projects">View projects</a>
-        <a class="btn" href="#resume">Resume</a>
-        <a class="btn" href="mailto:YOUR_EMAIL_HERE">Email</a>
+      <p class="lead">
+        Building gameplay systems in Unreal (Blueprints) and Unity (C#)—interaction, inventory/UI flow, and turn-based combat loops.
+        Bringing 6+ years engineering/RPA consulting experience: fast iteration, debugging discipline, and clear technical breakdowns.
+      </p>
+
+      <div class="cta-row" aria-label="Primary links">
+        <!-- NOTE: ensure this matches your repo EXACTLY (case-sensitive on GitHub Pages) -->
+        <a class="btn" href="Assets/Resume/Foutzitzakis_Dimitris_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+        <a class="btn" href="https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:foutz_is@hotmail.com">Email</a>
+
+        <a class="btn icon" href="https://github.com/DimitrisFuzi" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <img class="icon-img" src="Assets/icons/github-mark-white.png" alt="" aria-hidden="true" />
+        </a>
+
+        <a class="btn icon" href="https://fouzis.itch.io/" target="_blank" rel="noreferrer" aria-label="itch.io">
+          <img class="icon-img" src="Assets/icons/itchio-logo-white.png" alt="" aria-hidden="true" />
+        </a>
       </div>
 
       <div class="meta">
-        <span class="pill">Unreal Engine (Blueprint; C++ learning)</span>
+        <span class="pill">Unreal Engine (Blueprints)</span>
         <span class="pill">Unity (C#)</span>
-        <span class="pill">Gameplay systems • Interaction • UI • Iteration</span>
-        <span class="pill">Git • Issue tracking • Clean documentation</span>
+        <span class="pill">Gameplay systems (Interaction, Inventory, UI flow)</span>
+        <span class="pill">Turn-based combat systems</span>
+        <span class="pill">Git (branches, releases)</span>
+        <span class="pill">Documentation (tech breakdowns)</span>
       </div>
     </section>
   </header>
 
   <main class="wrap">
+    <section class="section systems-snapshot" aria-label="Systems snapshot">
+      <h2>Systems snapshot</h2>
+      <ul class="bullets snapshot">
+        <li>Interaction frameworks (trace + interface patterns, prompts, per-object actions)</li>
+        <li>UI flow &amp; input modes (gameplay / inspect / menu)</li>
+        <li>Inventory/pickup systems + UI binding (data-driven UI grids)</li>
+        <li>Turn-based combat loops (state flow, intent previews, status effects)</li>
+      </ul>
+    </section>
+
     <section id="projects" class="section">
       <h2>Projects</h2>
       <p class="subtle">
-        Focus: small scope, strong systems, clear documentation. Two primary projects; Unreal is currently WIP.
+        Two focused projects with playable builds and implementation notes. I optimize for small scope, clear systems, and readable documentation.
       </p>
 
       <div class="grid">
         <!-- Unreal project card -->
         <article class="card">
           <div class="card-top">
-           <div class="thumb">
-  <video controls preload="metadata" playsinline
-  poster="Assets/Video/Video_Cover.png">
-  <source src="Assets/Video/Systems_Video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-</div>
+            <div>
+              <div class="thumb">
+                <a class="thumb-link" href="https://www.youtube.com/watch?v=0bcQEUce8Ac" target="_blank" rel="noreferrer"
+                   aria-label="Watch Unreal walkthrough on YouTube">
+                  <img class="thumb-img" src="Assets/Video/Video_Cover.png" alt="Unreal systems walkthrough thumbnail" />
+                  <span class="thumb-play" aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="thumb-caption">Systems Highlight</div>
+            </div>
+
             <div class="card-title-row">
-              <h3>Unreal Interaction & Puzzle Systems Prototype <span class="tag wip">WIP</span></h3>
+              <h3>First-Person Puzzle Systems Showcase (Unreal) <span class="tag playable">Playable</span></h3>
               <p class="one-liner">
-                First-person interaction framework (raycast), inspect mode, and scalable puzzle scripting pattern.
+                Interaction framework, inspect mode, pickup/inventory, and a short puzzle flow built as a gameplay systems showcase.
               </p>
             </div>
           </div>
 
+          <div class="card-subhead">Systems implemented</div>
           <ul class="bullets">
-            <li>Interaction: trace-based detection, prompts, and action routing</li>
-            <li>Inspect mechanic: rotate/zoom + contextual UI feedback</li>
-            <li>Puzzle/door sequence: modular logic, easy to extend</li>
+            <li>Modular interaction framework (interfaces + shared base item)</li>
+            <li>Inspect mode with SceneCapture preview + dedicated controls</li>
+            <li>Inventory component + struct-driven dynamic UI grid</li>
           </ul>
 
-          <div class="tags">
-            <span class="pill small">Unreal</span>
-            <span class="pill small">Blueprint</span>
-            <span class="pill small">Gameplay Framework</span>
-            <span class="pill small">UMG (planned)</span>
-          </div>
-
           <div class="links">
-            <a class="btn small" href="YOUR_UNREAL_VIDEO_LINK" target="_blank" rel="noreferrer">Watch</a>
-            <a class="btn small" href="YOUR_UNREAL_BUILD_LINK" target="_blank" rel="noreferrer">Build</a>
-            <a class="btn small" href="YOUR_UNREAL_REPO_LINK" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn small" href="https://fouzis.itch.io/firstpersonpuzzlegameshowcase-systems-prototype-unreal-blueprint" target="_blank" rel="noreferrer">itch.io</a>
+            <a class="btn small" href="https://github.com/DimitrisFuzi/FirstPersonPuzzleGameShowcase" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn small" href="https://github.com/DimitrisFuzi/FirstPersonPuzzleGameShowcase/blob/main/Docs/TECHNICAL.md" target="_blank" rel="noreferrer">Tech breakdown</a>
+            <a class="btn small" href="https://youtu.be/08nAK9EJbp0" target="_blank" rel="noreferrer">Walkthrough</a>
           </div>
         </article>
 
         <!-- Unity project card -->
         <article class="card">
           <div class="card-top">
-            <div class="thumb">
-              <div class="thumb-placeholder">Unity clip</div>
+            <div>
+              <div class="thumb">
+                <a class="thumb-link" href="https://youtu.be/_MrFHet-i7c" target="_blank" rel="noreferrer"
+                   aria-label="Watch Unity systems highlight on YouTube">
+                  <img class="thumb-img" src="Assets/Video/Unity_Video_Cover.png" alt="Unity gameplay reel thumbnail" />
+                  <span class="thumb-play" aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="thumb-caption">Systems Highlight</div>
             </div>
+
             <div class="card-title-row">
-              <h3>Unity Turn-Based Deckbuilder <span class="tag playable">Playable</span></h3>
+              <h3>Turn-Based Deckbuilder Prototype (Unity) <span class="tag playable">Playable</span></h3>
               <p class="one-liner">
-                Shipped combat loop with basic AI, reward selection, and scene flow (normal fight + boss).
+                Turn-based combat loop with card UX, enemy intents, reward selection, and basic progression flow.
               </p>
             </div>
           </div>
 
+          <div class="card-subhead">Systems implemented</div>
           <ul class="bullets">
-            <li>Turn-based combat: states, resolution order, and feedback</li>
-            <li>AI patterns: simple decision logic + readable behaviors</li>
-            <li>Rewards + flow: post-fight choices and progression loop</li>
+            <li>Turn-based combat loop with clear state/resolution order</li>
+            <li>Enemy intent/telegraph system + readable behavior structure</li>
+            <li>Status effects + reward flow (fight → reward → boss)</li>
           </ul>
 
-          <div class="tags">
-            <span class="pill small">Unity</span>
-            <span class="pill small">C#</span>
-            <span class="pill small">Gameplay systems</span>
-            <span class="pill small">AI</span>
-          </div>
-
           <div class="links">
-            <a class="btn small" href="YOUR_UNITY_VIDEO_LINK" target="_blank" rel="noreferrer">Watch</a>
-            <a class="btn small" href="YOUR_ITCH_OR_BUILD_LINK" target="_blank" rel="noreferrer">Play</a>
-            <a class="btn small" href="YOUR_UNITY_REPO_LINK" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn small" href="https://fouzis.itch.io/card-battler-unity-learning-clone-inspired-by-slay-the-spire" target="_blank" rel="noreferrer">itch.io</a>
+            <a class="btn small" href="https://github.com/DimitrisFuzi/UnityRoguelikeCardGame" target="_blank" rel="noreferrer">Code</a>
+            <a class="btn small" href="https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md" target="_blank" rel="noreferrer">Tech breakdown</a>
+            <a class="btn small" href="https://youtu.be/DVQS6vFOEyo" target="_blank" rel="noreferrer">Gameplay Reel</a>
           </div>
         </article>
       </div>
-    </section>
-
-    <section id="resume" class="section">
-      <h2>Resume</h2>
-      <p class="subtle">
-        Keep resume to 1 page. Lead with projects. RPA consulting should translate into delivery/ownership and clean engineering habits.
-      </p>
-      <div class="resume-row">
-        <a class="btn primary" href="assets/Dimitris_Fuzi_Resume.pdf" target="_blank" rel="noreferrer">Download PDF</a>
-        <a class="btn" href="YOUR_LINKEDIN_LINK" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/DimitrisFuzi" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-      <p class="note">
-        If the PDF link isn’t ready yet, keep this section but replace the button with “Resume available on request” temporarily.
-      </p>
     </section>
 
     <section id="contact" class="section">
@@ -143,7 +157,7 @@
       <div class="contact">
         <div>
           <div class="label">Email</div>
-          <a href="mailto:YOUR_EMAIL_HERE">YOUR_EMAIL_HERE</a>
+          <a href="mailto:foutz_is@hotmail.com">foutz_is@hotmail.com</a>
         </div>
         <div>
           <div class="label">GitHub</div>
@@ -151,15 +165,23 @@
         </div>
         <div>
           <div class="label">LinkedIn</div>
-          <a href="YOUR_LINKEDIN_LINK" target="_blank" rel="noreferrer">YOUR_LINKEDIN_LINK</a>
+          <a href="https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188" target="_blank" rel="noreferrer">linkedin.com/in/dimitrios-foutzitzakis-271302188</a>
+        </div>
+        <div>
+          <div class="label">itch.io</div>
+          <a href="https://fouzis.itch.io/" target="_blank" rel="noreferrer">fouzis.itch.io</a>
         </div>
       </div>
+
+      <p class="contact-meta">
+        Thessaloniki, Greece • EET/EEST (UTC+2 / UTC+3) • Open to remote / relocation
+      </p>
     </section>
 
     <footer class="footer">
       <span>© <span id="y"></span> Dimitris Fuzi</span>
       <span class="sep">•</span>
-      <span>Last updated: 2026-02-28</span>
+      <span>Last updated: 2026-03-28</span>
     </footer>
   </main>
 
