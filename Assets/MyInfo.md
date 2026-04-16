@@ -19,3 +19,9 @@ Unity project Systems Highlight video: https://youtu.be/_MrFHet-i7c
 Unity project Gameplay Reel video: https://youtu.be/DVQS6vFOEyo
 Unity project TECHNICAL document link: https://github.com/DimitrisFuzi/UnityRoguelikeCardGame/blob/main/Docs/TECH_BREAKDOWN.md
 
+Ability System systems hightlight video link: https://youtu.be/yPW6ly3kf84
+Ability System github repo: https://github.com/DimitrisFuzi/AbilitySystem/tree/main
+Ability System readme link: https://github.com/DimitrisFuzi/AbilitySystem/blob/main/README.md
+Ability System TECHNICAL document link: https://github.com/DimitrisFuzi/AbilitySystem/blob/main/docs/TECHNICAL.md
+Ability System itchio link: https://fouzis.itch.io/unreal-ability-system-prototype-cpp
+Ability System release link: https://github.com/DimitrisFuzi/AbilitySystem/releases
