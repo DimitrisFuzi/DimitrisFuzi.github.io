@@ -1,4 +1,4 @@
-Linkedin: https://www.linkedin.com/in/dimitrios-foutzitzakis-271302188
+Linkedin: https://www.linkedin.com/in/dimitrios-foutzitzakis
 email: foutz_is@hotmail.com
 Itchio profile Page: https://fouzis.itch.io/
 portfolio page link: https://dimitrisfuzi.github.io/
